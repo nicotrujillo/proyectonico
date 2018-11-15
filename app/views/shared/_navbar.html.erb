@@ -1,5 +1,4 @@
-<nav class="navbar navbar-default" role="navigation"
-    margin-bottom: 0px;>
+<nav class="navbar navbar-default" role="navigation" margin-bottom: 0px;>
       <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -9,12 +8,12 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar navbar-default" href="http://www.google.cl">Mi pinterest</a>
+          <a class="navbar navbar-default" href="<%= root_path %>">Mi pinterest</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav nav-pills">
+          <ul class="nav navbar-nav">
             <li><a href="#" style="color:gray">Nosotros <span class="sr-only">(current)</span></a></li>
             <li><a href="<%= pins_path %>" style="color:gray">Pins</a></li>
             <li class="dropdown">
@@ -30,6 +29,15 @@
               </ul>
             </li>
           </ul>
+          <ul class= "nav navbar-nav navbar-right">
+            <li><a href="<%= new_user_session_path %>">Ingreso</a></li>
+            <li><a href="<%= new_user_registration_path %>">Registro</a></li>
+            <li><a href="<%= destroy_user_session_path %>" data-method="DELETE"> Salir </a></li>
+
+          </ul>  
+
+          
+      
           
 
         </div><!-- /.navbar-collapse -->
